@@ -6,8 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf build && NODE_ENV=production webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "hi": "echo \"hello!\""
   },
+  "pre-commit": [
+      "hi"
+  ],
   "dependencies": {
     "react": "16.13.0",
     "react-dom": "16.13.0",

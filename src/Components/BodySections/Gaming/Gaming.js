@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-export default function Gaming(props) {
+export default function Gaming() {
   return (
     <section>
       Gaming

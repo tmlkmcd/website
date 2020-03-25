@@ -4,7 +4,7 @@ import useBlog from '../../../Hooks/useBlog';
 
 import './style.scss';
 
-export default function Tech(props) {
+export default function Tech() {
   const blogPosts = useBlog();
 
   console.log(blogPosts);

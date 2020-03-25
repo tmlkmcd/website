@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-export default function Music(props) {
+export default function Music() {
   return (
     <section>
       Music

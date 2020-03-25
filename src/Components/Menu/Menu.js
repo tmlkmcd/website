@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './style.scss';
 
-export default function Menu(props) {
+export default function Menu() {
   return (
     <nav>
       <ul className='navbar'>

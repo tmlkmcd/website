@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-export default function Header(props) {
+export default function Header() {
   return (
     <header>
       Header

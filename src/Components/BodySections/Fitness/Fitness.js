@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-export default function Fitness(props) {
+export default function Fitness() {
   return (
     <section>
       Fitness

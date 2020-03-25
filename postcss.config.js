@@ -2,9 +2,9 @@
 const ap = require('autoprefixer');
 
 const postcssConfig = {
-    plugins: [
-        ap
-    ]
+  plugins: [
+    ap
+  ]
 };
 
 module.exports = postcssConfig;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-export default function Photography(props) {
+export default function Photography() {
   return (
     <section>
       Photography

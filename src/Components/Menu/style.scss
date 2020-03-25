@@ -1,0 +1,8 @@
+.navbar {
+  display: block;
+
+  &__item {
+    list-style-type: none;
+    display: inline-block;
+  }
+}

@@ -5,14 +5,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 let webpackConfig = {
-  entry: './src/main.js',
+  entry: './src/main.tsx',
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'sourcemap',
+  devtool: 'inline-source-map',
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -54,6 +59,9 @@ let webpackConfig = {
         }]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   },
   plugins: [
     new HtmlWebpackPlugin({

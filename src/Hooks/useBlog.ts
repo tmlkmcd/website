@@ -22,14 +22,15 @@ const useBlog = (category?: PostCategory) => {
 };
 
 export function sanitizeWordpressResponse(post: WordpressPost): Post {
-  const { slug, date, modified, excerpt, content } = post;
+  const { slug, date, modified, excerpt, content, title } = post;
 
   return {
     slug,
     date: new Date(date),
     modified: new Date(modified),
     excerpt,
-    content
+    content,
+    title
   };
 }
 

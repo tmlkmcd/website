@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import moment from 'moment';
 
 import './style.scss';
 
@@ -7,13 +8,19 @@ interface BlogPostProps {
 }
 
 const BlogPost: FunctionComponent<BlogPostProps> = ({ post }) => {
-  const {
-    slug, date, modified, excerpt, content
-  } = post;
+  const { date, excerpt, title } = post;
 
   return (
-    <article>
-      {slug}
+    <article className='blogPost'>
+      <div
+        className='blogPost__header'
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
+      <div className='blogPost__date'>{moment(date).format('YYYY-DD-MM')}</div>
+      <div
+        className='blogPost__excerpt'
+        dangerouslySetInnerHTML={{ __html: excerpt }}
+      />
     </article>
   );
 }

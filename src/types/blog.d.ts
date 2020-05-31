@@ -8,7 +8,8 @@ type Post = {
   date: Date,
   modified: Date,
   excerpt: string,
-  content: string
+  content: string,
+  title: string
 }
 
 type BlogPayload = Partial<{

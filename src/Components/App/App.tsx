@@ -13,17 +13,19 @@ import Blog from '../Blog';
 
 const App = () => {
   return (
-    <div className='wrapper'>
-      <Header />
-      <Router>
-        <Menu />
-        <BlogProvider>
-          <Switch>
-            <Route path='/:category?' component={Blog} />
-          </Switch>
-        </BlogProvider>
-      </Router>
-      <Footer />
+    <div className='pageWrapper'>
+      <div className='wrapper'>
+        <Header />
+        <Router>
+          <Menu />
+          <BlogProvider>
+            <Switch>
+              <Route path='/:category?' component={Blog} />
+            </Switch>
+          </BlogProvider>
+        </Router>
+        <Footer />
+      </div>
     </div>
   );
 }

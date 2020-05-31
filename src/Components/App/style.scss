@@ -1,15 +1,41 @@
 @import '../../variables';
 
-.wrapper {
+.pageWrapper {
   width: 100%;
-  background: white;
-  padding: $gap-small;
+  height: 100vh;
+  background-image: url('../../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-  @media only screen and (max-width: $break-mobile) {
-    margin: $gap-small;
+  @media only screen and (min-width: $break-mobile) {
+    padding-top: $page-margin-small;
   }
 
-  @media only screen and (max-width: $break-mobile) {
-    padding: $gap-large;
+  @media only screen and (min-width: $break-large) {
+    padding-top: $page-margin;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1080px;
+  height: 100vh;
+  position: relative;
+  background: rgba(25, 25, 25, 0.85);
+  color: $font-color;
+  padding: $gap;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $break-mobile) {
+    width: calc(100% - #{$page-margin-small * 2});
+    height: auto;
+  }
+
+  @media only screen and (min-width: $break-large) {
+    width: calc(100% - #{$page-margin * 2});
+    height: auto;
   }
 }

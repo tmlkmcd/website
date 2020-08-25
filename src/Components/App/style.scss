@@ -1,41 +1,32 @@
 @import '../../variables';
 
-.pageWrapper {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../../images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  @media only screen and (min-width: $break-mobile) {
-    padding-top: $page-margin-small;
-  }
-
-  @media only screen and (min-width: $break-large) {
-    padding-top: $page-margin;
-  }
-}
-
 .wrapper {
   width: 100%;
   max-width: 1080px;
-  height: 100vh;
   position: relative;
-  background: rgba(25, 25, 25, 0.85);
+  background: rgba(200, 200, 200, 0.75);
   color: $font-color;
   padding: $gap;
   box-sizing: border-box;
   margin: 0 auto;
+  border: 1px solid #777;
+  box-shadow: 4px 4px 8px 0 #111;
 
   @media only screen and (min-width: $break-mobile) {
     width: calc(100% - #{$page-margin-small * 2});
+    margin-top: $page-margin-small;
     height: auto;
   }
 
   @media only screen and (min-width: $break-large) {
     width: calc(100% - #{$page-margin * 2});
+    margin-top: $page-margin;
     height: auto;
   }
+}
+
+.separator {
+  width: 80%;
+  margin: $gap auto;
+  border: 1px solid black;
 }

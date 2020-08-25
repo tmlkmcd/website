@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import moment from 'moment';
 
 import Fetcher from '../Helpers/Fetcher';
 
-const useBlog = (category?: PostCategory) => {
+const useBlog = (category?: string) => {
+  console.log(category);
   const [blogPosts, setBlogPosts] = useState<BlogPayload>({ posts: [] });
 
   useEffect(() => {
@@ -22,15 +22,28 @@ const useBlog = (category?: PostCategory) => {
 };
 
 export function sanitizeWordpressResponse(post: WordpressPost): Post {
-  const { slug, date, modified, excerpt, content, title } = post;
+  const {
+    id,
+    slug,
+    date,
+    modified,
+    excerpt,
+    content,
+    title,
+    categories
+  } = post;
+
+  const categoryNames = Object.keys(categories);
 
   return {
+    id,
     slug,
     date: new Date(date),
     modified: new Date(modified),
     excerpt,
     content,
-    title
+    title,
+    categories: categoryNames
   };
 }
 

@@ -1,8 +1,18 @@
 .navbar {
-  display: block;
+  display: flex;
+  margin: 0;
+  padding: 0;
 
   &__item {
+    text-align: center;
+    padding: 8px;
     list-style-type: none;
-    display: inline-block;
+    line-height: 2 rem;
+    flex: 1;
+    transition: 0.2s all;
+
+    &:hover {
+      background: linear-gradient(red, blue);
+    }
   }
 }

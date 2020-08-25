@@ -1,6 +1,35 @@
+@import './variables';
+
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
 body {
   margin: 0;
   padding: 0;
-  background-color: blanchedalmond;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: blanchedalmond;
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 12.5pt;
+  line-height: 1.8rem;
+
+  h1,
+  h2,
+  h3 {
+    color: $font-header;
+  }
+
+  .headerNote {
+    color: $font-header-note;
+  }
+
+  a {
+    color: $font-link;
+
+    &:hover {
+      color: $font-link-hover;
+    }
+  }
 }

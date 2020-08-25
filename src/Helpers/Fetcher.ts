@@ -1,7 +1,13 @@
 const blogId = '147034453';
 
 const endpoints = {
-  blogPosts: `https://public-api.wordpress.com/rest/v1.1/sites/${blogId}/posts`
+  blog: (category?: string) => {
+    let endpoint = `https://public-api.wordpress.com/rest/v1.1/sites/${blogId}/posts/`;
+    if (category) endpoint += `?category=${category}`;
+
+    return endpoint;
+  },
+  post: (slug: string) => `https://public-api.wordpress.com/rest/v1.1/sites/147034453/posts/slug:${slug}`
 };
 
 export default abstract class Fetcher {
@@ -13,7 +19,11 @@ export default abstract class Fetcher {
       });
   }
 
-  static getPosts(type: PostCategory) { // eslint-disable-line no-unused-vars
-    return Fetcher.get(endpoints.blogPosts);
+  static getPosts(type: string) { // eslint-disable-line no-unused-vars
+    return Fetcher.get(endpoints.blog(type));
+  }
+
+  static getPost(slug: string) {
+    return Fetcher.get(endpoints.post(slug));
   }
 }

@@ -1,0 +1,24 @@
+@import '../../variables';
+
+.blogPost {
+  width: 100%;
+  max-width: 625px;
+  margin: 0 auto;
+
+  h2 {
+    margin-top: $gap-small;
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  &__date,
+  &__tags {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}

@@ -2,9 +2,10 @@ import React, { useState, FunctionComponent } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import useBlog from '../Hooks/useBlog';
+import Query from '../Helpers/Query';
 
 interface BlogStore extends BlogPayload {
-  category: PostCategory
+  category: string
 }
 
 interface BlogProviderProps {
@@ -18,11 +19,8 @@ export const BlogContext = React.createContext<BlogStore>({
 
 const BlogProvider: FunctionComponent<BlogProviderProps> = (props) => {
   const { children } = props;
-  const { pathname } = useLocation();
   
-  const categoryParam = pathname.split('/')[1];
-
-  const category = isValidCategory(categoryParam) ? categoryParam : null;
+  const category = Query.parseQuery().category;
   const blogPosts = useBlog(category);
 
   const store: BlogStore = {
@@ -35,10 +33,6 @@ const BlogProvider: FunctionComponent<BlogProviderProps> = (props) => {
       {children}
     </BlogContext.Provider>
   );
-}
-
-function isValidCategory(param: string): param is PostCategory {
-  return [null, 'tech', 'photography', 'music', 'gaming', 'fitness'].includes(param);
 }
 
 export default BlogProvider;

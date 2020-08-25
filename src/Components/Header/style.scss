@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+
+  &__left {
+    flex: 1;
+
+    &__image {
+      height: 200px;
+    }
+
+    &__social {
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    &__socialIcon {
+      display: inline-block;
+      padding: 4px;
+
+      &--facebook a {
+        color: #4267b2;
+      }
+
+      &--instagram a {
+        color: #bc2a8d;
+      }
+
+      &--twitter a {
+        color: #1dcaff;
+      }
+
+      &--linkedin a {
+        color: #2867b2;
+      }
+    }
+  }
+
+  &__right {
+    flex: 2;
+  }
+}

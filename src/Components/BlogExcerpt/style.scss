@@ -1,0 +1,28 @@
+@import '../../variables';
+
+.blogExcerpt {
+  background: rgba(0, 0, 0, 0.1);
+  padding: $gap-small;
+
+  &__date {
+    color: $font-header-note;
+    font-weight: bold;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+    line-height: 1.5rem;
+  }
+
+  &__header {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+
+    a {
+      text-decoration: none;
+      color: $font-header;
+
+      &:hover {
+        color: $font-header;
+      }
+    }
+  }
+}

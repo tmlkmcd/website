@@ -10,4 +10,8 @@ $page-margin-small: 35px;
 $page-margin: 50px;
 
 /* Colours */
-$font-color: rgb(233, 233, 211);
+$font-color: rgba(0, 0, 0, 0.9);
+$font-header-note: #761c76;
+$font-header: #3d3208;
+$font-link: #442b48;
+$font-link-hover: lighten($font-link, 10%);

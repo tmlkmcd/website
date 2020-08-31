@@ -1,7 +1,6 @@
 @import '../../variables';
 
 .blogExcerpt {
-  background: rgba(0, 0, 0, 0.1);
   padding: $gap-small;
 
   &__date {
@@ -21,8 +20,12 @@
       color: $font-header;
 
       &:hover {
-        color: $font-header;
+        color: lighten($font-header, 6%);
       }
     }
+  }
+
+  &:not(:last-child) {
+    padding-bottom: $gap;
   }
 }

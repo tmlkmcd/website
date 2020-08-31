@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import Fetcher from '../Helpers/Fetcher';
 
 const useBlog = (category?: string) => {
-  console.log(category);
   const [blogPosts, setBlogPosts] = useState<BlogPayload>({ posts: [] });
 
   useEffect(() => {

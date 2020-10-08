@@ -7,7 +7,6 @@
   position: relative;
   background: rgba(200, 200, 200, 0.75);
   color: $font-color;
-  padding: $gap;
   box-sizing: border-box;
   margin: 0 auto;
   border: 1px solid #777;
@@ -17,6 +16,7 @@
     width: calc(100% - #{$page-margin-small * 2});
     margin-top: $page-margin-small;
     height: auto;
+    padding: $gap;
   }
 
   @media only screen and (min-width: $break-large) {

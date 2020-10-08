@@ -1,4 +1,10 @@
+@import '../../variables';
+
 .blogSection {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 4px;
+  padding: 0 8px 8px 8px;
+
+  @media only screen and (min-width: $break-mobile) {
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.1);
+  }
 }

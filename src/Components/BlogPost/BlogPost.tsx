@@ -7,10 +7,14 @@ import usePost from '../../Hooks/usePost';
 
 import './style.scss';
 
+interface ParamTypes {
+  slug: string;
+}
+
 const dateFormat = 'ddd, MMM D';
 
 const BlogPost: FunctionComponent = () => {
-  const { slug } = useParams();
+  const { slug } = useParams<ParamTypes>();
   const { loading, post } = usePost(slug);
   const history = useHistory();
 

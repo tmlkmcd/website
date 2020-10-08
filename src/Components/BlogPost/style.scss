@@ -2,8 +2,12 @@
 
 .blogPost {
   width: 100%;
-  max-width: 625px;
+  max-width: 725px;
   margin: 0 auto;
+
+  p {
+    text-indent: 0.75cm;
+  }
 
   h2 {
     margin-top: $gap-small;

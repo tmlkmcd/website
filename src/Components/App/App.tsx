@@ -18,7 +18,8 @@ const App = () => {
         <Header />
         <div className='separator' />
         <Router>
-          <Menu />
+          <Menu.Accordion />
+          <Menu.Bar />
           <div className='separator' />
           <Switch>
             <Route path='/' exact component={Blog} />

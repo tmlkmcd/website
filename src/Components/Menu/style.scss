@@ -1,48 +1,27 @@
 @import '../../variables';
 
 .navbar {
-  display: none;
   margin: 0;
   padding: 0;
 
   &__item {
-    flex: 1;
-    text-align: center;
     list-style-type: none;
     line-height: 2 rem;
     transition: 0.2s all;
-    position: relative;
   }
 
   &__nestedList {
     display: none;
-    position: absolute;
     padding: 0;
     margin: 0;
-    background: rgba(230, 230, 230, 0.8);
-    border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 100%;
   }
 
   &__nestedItem {
     list-style-type: none;
-    text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-
-    &:hover {
-      text-shadow: 0 0 12px $font-link-hover;
-    }
 
     a {
-      display: block;
       text-decoration: none;
-      margin: 6px 6px 6px 12px;
     }
-  }
-
-  &__item:hover &__nestedList {
-    display: block;
   }
 
   &__mainLink {
@@ -62,8 +41,70 @@
   }
 }
 
+@media only screen and (max-width: $break-mobile) {
+  .navbar {
+    display: block;
+
+    &__item {
+      text-align: center;
+    }
+
+    &__border {
+      width: 50%;
+    }
+
+    &__mainLink--active + &__nestedList {
+      display: block;
+    }
+
+    &__item:not(:last-child) &__mainLink ~ &__border {
+      display: block;
+      width: 50%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      margin: 0 auto;
+    }
+  }
+}
+
 @media only screen and (min-width: $break-mobile) {
   .navbar {
     display: flex;
+
+    &__item {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    &__nestedList {
+      display: none;
+      position: absolute;
+      background: rgba(230, 230, 230, 0.8);
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+
+    &__nestedItem {
+      text-align: left;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+      &:hover {
+        text-shadow: 0 0 12px $font-link-hover;
+      }
+
+      a {
+        display: block;
+        margin: 6px 6px 6px 12px;
+      }
+    }
+
+    &__item:hover &__nestedList {
+      display: block;
+    }
+
+    &__border {
+      display: none;
+    }
   }
 }

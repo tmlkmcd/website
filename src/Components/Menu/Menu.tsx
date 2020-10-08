@@ -10,7 +10,11 @@ const Bar: FunctionComponent = () => {
       <ul className='navbar'>
         {menuStructure.map(({ text, route, subItems }) => (
           <li className='navbar__item' key={route}>
-            <NavLink className='navbar__mainLink' activeClassName='navbar__mainLink--active' to={route}>
+            <NavLink
+              className='navbar__mainLink'
+              activeClassName='navbar__mainLink--active'
+              to={route}
+            >
               <div>{text}</div>
             </NavLink>
             {subItems && (
@@ -22,6 +26,7 @@ const Bar: FunctionComponent = () => {
                 )))}
               </ul>
             )}
+            <div className='navbar__border' />
           </li>
         ))}
       </ul>

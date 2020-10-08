@@ -1,7 +1,3 @@
-import Accordion from './Accordion';
-import Bar from './Bar';
+import Menu from './Menu';
 
-export default {
-  Accordion,
-  Bar
-}
+export default Menu;

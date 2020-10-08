@@ -2,16 +2,29 @@
 
 @import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: blanchedalmond;
+@font-face {
+  font-family: 'Amatic';
+  src: url('../fonts/AmaticSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Amatic';
+  src: url('../fonts/Amatic-Bold.ttf');
+  font-weight: bold;
+}
+
+html {
   background-image: url('./images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 12.5pt;
   line-height: 1.8rem;
 

@@ -8,7 +8,7 @@ import Menu from '../Menu';
 import Footer from '../Footer';
 
 import Blog from '../Blog';
-import BlogPost from '../BlogPost';
+import BlogPost from '../../Components/BlogPost';
 import Photography from '../Photography';
 
 const App = () => {

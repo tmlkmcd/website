@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import LoadingSpinner from '../LoadingSpinner';
+import LoadingSpinner from '../../Components/LoadingSpinner';
 
 import './style.scss';
 

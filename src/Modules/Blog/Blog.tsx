@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react';
 import { useParams } from 'react-router-dom'; 
 
 import useBlog from '../../Hooks/useBlog';
-import LoadingSpinner from '../LoadingSpinner';
-import BlogExcerpt from '../BlogExcerpt';
+import LoadingSpinner from '../../Components/LoadingSpinner';
+import BlogExcerpt from '../../Components/BlogExcerpt';
 
 import './style.scss';
 

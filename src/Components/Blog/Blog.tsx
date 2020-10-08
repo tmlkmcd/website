@@ -7,8 +7,12 @@ import BlogExcerpt from '../BlogExcerpt';
 
 import './style.scss';
 
+interface ParamTypes {
+  category: string;
+}
+
 const Blog: FunctionComponent = () => {
-  const { category } = useParams();
+  const { category } = useParams<ParamTypes>();
   const {
     loading,
     posts

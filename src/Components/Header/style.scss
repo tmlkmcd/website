@@ -1,12 +1,20 @@
+@import '../../variables';
+
 .header {
-  display: flex;
+  display: block;
 
   &__left {
-    flex: 1;
+    text-align: center;
 
     &__image {
       height: 200px;
+      margin: 0 auto;
     }
+  }
+
+  &__right {
+    text-align: center;
+    position: relative;
 
     &__social {
       text-align: center;
@@ -17,25 +25,36 @@
       display: inline-block;
       padding: 4px;
 
-      &--facebook a {
-        color: #4267b2;
-      }
+      &--facebook a { color: #4267b2; }
+      &--instagram a { color: #bc2a8d; }
+      &--twitter a { color: #1dcaff; }
+      &--linkedin a { color: #2867b2; }
+    }
 
-      &--instagram a {
-        color: #bc2a8d;
-      }
+    &__keyword {
+      font-family: Amatic, sans-serif;
+      font-weight: bold;
+      font-size: 2.4rem;
+      margin-top: 20px;
+      margin-bottom: 30px;
 
-      &--twitter a {
-        color: #1dcaff;
-      }
-
-      &--linkedin a {
-        color: #2867b2;
+      &:last-child {
+        font-size: 3.2rem;
       }
     }
   }
+}
 
-  &__right {
-    flex: 2;
+@media only screen and (min-width: $break-small) {
+  .header {
+    display: flex;
+
+    &__left {
+      flex: 1;
+    }
+
+    &__right {
+      flex: 2;
+    }
   }
 }
